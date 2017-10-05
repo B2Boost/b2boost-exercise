@@ -32,8 +32,8 @@ class PartnersFunctionalSpec extends GebSpec {
             name = 'Bells & Whistles'
             reference = UUID.randomUUID().toString()
             locale = "en_GB"
-            expirationTime = '2017-11-03T12:18:46+00:00'
             // or to make to make it future proof: new Date().plus(10).decodeDate()
+            expirationTime = '2017-11-03T12:18:46+00:00'
         }
     }
 
