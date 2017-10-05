@@ -1,4 +1,4 @@
-package exception
+package b2boost.exception
 
 import org.grails.core.exceptions.GrailsException
 

@@ -1,4 +1,4 @@
-package b2boost.commands
+package b2boost.command
 
 import b2boost.Partner
 import grails.validation.Validateable

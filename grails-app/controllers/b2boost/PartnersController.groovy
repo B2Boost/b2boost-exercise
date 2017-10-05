@@ -1,7 +1,7 @@
 package b2boost
 
-import b2boost.commands.PartnerCommand
-import exception.ObjectNotFoundException
+import b2boost.command.PartnerCommand
+import b2boost.exception.ObjectNotFoundException
 import grails.validation.ValidationException
 
 import static org.springframework.http.HttpStatus.*
