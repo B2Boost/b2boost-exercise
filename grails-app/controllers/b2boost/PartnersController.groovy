@@ -13,6 +13,9 @@ class PartnersController {
 
     PartnerService partnerService
 
+    //LMU: not sure if using namespace to have the prefix "free" is the right move.
+    //namespace might have to be used to do version management, and then you will have
+    //to find a new solution to place your prefix
     static namespace = "api"
     static responseFormats = ['json']
     static allowedMethods = [index: "GET", show: "GET", save: "POST", update: "PUT", delete: "DELETE"]
