@@ -1,5 +1,6 @@
 response.status 500
 
+//LMU: we could learn something from this. It would be interesting if we could do our error rendering entriedly in json views
 json {
     message "Internal server error"
     code 500

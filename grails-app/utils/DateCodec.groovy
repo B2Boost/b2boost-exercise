@@ -2,6 +2,7 @@ import java.time.OffsetDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
+//LMU: cool!
 class DateCodec {
     static encode = { theTarget ->
         Date.from(OffsetDateTime.parse(theTarget.toString()).toInstant())

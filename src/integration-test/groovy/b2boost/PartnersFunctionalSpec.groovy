@@ -9,6 +9,8 @@ import spock.lang.Unroll
 
 import static org.springframework.http.HttpStatus.*
 
+//LMU: test methods should follow the pattern "It <does something> when <something>"
+//LMU: would like to have some tests checking the timezone independent handling of datetimes
 @Integration
 @Rollback
 class PartnersFunctionalSpec extends GebSpec {
@@ -46,6 +48,8 @@ class PartnersFunctionalSpec extends GebSpec {
         }
     }
 
+
+    //LMU: good test
     @Unroll(" index action returns #message of items")
     void "Test the index action returns correct list of results"() {
         when: "The index action is requested"
@@ -65,6 +69,7 @@ class PartnersFunctionalSpec extends GebSpec {
         "?size=40"         | 0    | 30   | "maximum number possible"
     }
 
+    //LMU: OK
     void "Test the index action returns correct properties for the objects"() {
         when: "The index action is requested"
         def response = restBuilder.get("$resourcePath")
@@ -78,6 +83,7 @@ class PartnersFunctionalSpec extends GebSpec {
         response.json[0].expirationTime
     }
 
+    //LMU: you don't check the error message (substring search with contains is enough: the internal error could be caused by a NPE)
     void "Test the index action returns a correct object in case of error"() {
         when: "The index action is requested"
         def response = restBuilder.get("$resourcePath?from=something")
@@ -202,6 +208,7 @@ class PartnersFunctionalSpec extends GebSpec {
         response.json.message
     }
 
+    //LMU: does PUT partners/999999 not work?
     void "Test the update action returns the correct response in case of not finding the object"() {
         when: "The update action is executed with a problem"
         def response = restBuilder.put(resourcePath) {

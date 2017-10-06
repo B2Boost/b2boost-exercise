@@ -6,6 +6,8 @@ import grails.gorm.transactions.Transactional
 import grails.validation.ValidationException
 
 @Transactional
+// good         :clean and systematic code structure
+// not good     :error control flow through exceptions
 class PartnerService {
 
     List<PartnerCommand> list(ListCommand command) {

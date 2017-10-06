@@ -6,6 +6,9 @@ import grails.validation.ValidationException
 
 import static org.springframework.http.HttpStatus.*
 
+//LMU:
+// good         :clean demarcation between controller logic and business logic
+// not good     :error control flow through exceptions
 class PartnersController {
 
     PartnerService partnerService
